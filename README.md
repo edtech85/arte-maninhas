@@ -1,2 +1,4 @@
 # arte-maninhas
-Projeto para loja de artesanato
+Projeto em andamento para loja de artesanato
+
+Será utilizado HTML, CSS e JS.
