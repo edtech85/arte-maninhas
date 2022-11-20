@@ -1,0 +1,245 @@
+:root {
+    --light-purple: #f4ccff;
+    --dark-purple: #230023;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Arial, sans-serif;
+    background-color: var(--dark-purple);
+}
+
+.margin {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* BEGIN - NAV BAR --> */
+
+.logo {
+    width: 100%;
+    max-height: 300px;
+    padding: 0 5px 0 5px;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+/*
+img.logo-card {
+    width: 100%;
+    max-height: 300px;
+    padding: 0 5px 0 5px;
+    margin-top: 5%;
+}
+*/
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  /*   background-color: var(--dark-purple); afeta o efeito do scroll  */
+}
+
+#teste-color {
+   color : #fc1ee9
+}
+
+#navbar {
+    
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    max-width: 1800px;
+    transition: top 0.3s;
+}
+
+ul.topnav li {
+    float: left;
+}
+
+ul.topnav li a {
+    display: block;
+    color: var(--light-purple);
+    text-align: left;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+   background-color: var(--light-purple);
+    color: var(--dark-purple);
+}
+
+ul.topnav li a.active {
+    background-color: #0486aa;
+}
+
+ul.topnav li.right {
+    float: right; 
+}
+
+ul li {
+    list-style: none;
+}
+/* END - NAV BAR --> */
+
+/* BEGIN - DROP DOWN */
+li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 16px 16px;
+    text-decoration: none;
+    
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  /*  background-color: var(--dark-purple);
+    color: var(--light-purple); */
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 2px 2px 2px 2px var(--light-purple);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ee0000;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/* END - DROP DOWN */
+
+.aboutme-title {
+    font-size: 20px;
+    color: var(--light-purple);
+    text-align: center;
+}
+
+.aboutme {
+    background-color: var(--dark-purple);
+    color: var(--light-purple);
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.img-profile{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 50%;
+  }
+
+.description {
+    background-color: var(--light-purple);
+    text-align: center;
+    
+}
+
+.contact {
+    background-color: var(--dark-purple);
+    color: var(--light-purple);
+    text-align: center;
+    padding-top: 1%;
+}
+
+.redessociais {
+    border-radius: 50%;
+}
+
+.socialcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    margin: 10px;
+    background-color: var(--dark-purple);
+    color: var(--light-purple);
+    font-size: 10px;
+    text-align: center;
+}
+
+/* BEGIN - GRID - COLUMNS */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+     
+}
+
+.grid-container > div {
+    font-size: 30px;
+}
+/* END - GRID - COLUMNS */
+
+/* BEGIN - SOCIAL HOVER */
+/* Container needed to position the overlay. Adjust the width as needed */
+.containerhov {
+    position: relative;
+    width: 50px;
+}
+
+/* Make the image to responsive */
+.imagehov {
+    width: 50px;
+    height: 50px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlayhov {
+    position: absolute;
+    bottom: 7px;
+    left: 0;
+    right: 0;
+    background-color: var(--light-purple);
+    overflow: hidden;
+    max-width: 50px;
+    height: 50px;
+    transform: scale(0);
+    transition: 1s ease;
+    border-radius: 50%;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.containerhov:hover .overlayhov {
+    transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.texthov {
+    color: var(--dark-purple);
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
